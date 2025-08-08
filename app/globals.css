@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root{
+  --font-color:rgb(50,50,50);
+  --background:rgb(240,240,250);
+  --profile-green: rgb(140,223,130);
+  --profile-yellow: rgb(255 216 107);
+  --profile-red:rgb(255 109 109);
+  --profile-purple:rgb(245 152 229);
+  --profile-blue:rgb(98 168 239);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+.edit-form input{
+  background: var(--background);
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  display: block;
+  border-radius: 8px;
+  margin-bottom:10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.edit-form p{
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.edit-form label{
+  display: block;
+  margin-top:10px;
+  opacity:.75;
+  margin-bottom:5px;
+}
+
+.employee-form-button{
+  padding:8px;
+  padding-left:16px;
+  padding-right:16px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition:.25s;
+  cursor: pointer;
+}
+
+.employee-form-button:hover{
+  transform:translate(0,-3px);
+  opacity: .75;
+}
+
+.employee-card{
+  display: flex;
+  align-items: center;
+  
+  background-color: white;
+  
+  border-radius: 15px;
+  margin-bottom:5px;
+  padding-left: 8px;
+  
+  
+}
+
+p{
+  
+}
+
+.employee-card p{
+
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+
+  max-width: 200px;
+  width: 20%;
+  text-overflow: ellipsis;
+  margin-right: 16px;
+  padding-right: 16px;
+  border-right: 2px solid var(--background);
+  padding-left: 0;
+  white-space: nowrap;
+  overflow-x: clip;
+
+}
+
+.employee-card-icon{
+  /*padding:8px;*/
+  width: 40px;
+  height: 40px;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.employee-card-holder{
+  max-height:600;
+  overflow-y: auto;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 550px;
+  margin: auto;
+  padding-right: 10px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color:var(--font-color);
+  /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
 }
+
