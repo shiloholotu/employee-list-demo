@@ -85,19 +85,7 @@ const Edit = () => {
 
     async function saveProfile(e){
         e.preventDefault();
-        if(empId){
-            const {data, error} = await supabase.from("employees").upsert(profile);
-        }
-        else{
-            let newId = "";
-            const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            for(let i = 0; i < 10; i++){
-                const ind = parseInt(Math.random() * chars.length);
-                newId += chars[ind];
-            }
-            setProfileAttr("id",newId);
-            const {data, error} = await supabase.from("employees").upsert(profile);
-        }
+        await supabase.from("employees").upsert(profile);
         redirect("/");
     }
 
